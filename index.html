@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChessZone</title>
+    <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="./style/responsive.css" />
-    <link rel="stylesheet" href="./style/reset.css" />
-    <link rel="stylesheet" href="./images/image chess.jfif" />
   </head>
   <body>
     <header class="header">
@@ -21,9 +20,6 @@
           <li><a href="#join">Join</a></li>
         </ul>
       </nav>
-      <div class="menu-toggle">
-        <i class="fa-solid fa-bars"></i>
-      </div>
     </header>
     <section id="home" class="hero">
       <div class="hero-text">
@@ -35,22 +31,71 @@
       <h2>About Chess</h2>
       <div class="about-grid">
         <p>
-          Chess is a strategy game that improves your thinking, focus, and
-          decision-making skills. Played worldwide, it’s a battle of minds.
+          Chess is a timeless strategy game that challenges the mind and
+          sharpens decision-making skills. Its origins date back to around the
+          6th century in India, where an early form of the game called
+          chaturanga was played. From there, it spread to Persia, becoming
+          shatranj, and later reached Europe during the Middle Ages, where the
+          modern rules of chess began to take shape by the 15th century. Played
+          between two opponents, each controlling an army of pieces with unique
+          movements, the goal is simple yet profound: checkmate the opponent’s
+          king. Beneath its straightforward rules lies a world of deep tactics,
+          long-term planning, and creativity. Every move matters, as players
+          must balance offense and defense while predicting their opponent’s
+          intentions. From casual games to intense competitive matches, chess
+          offers endless possibilities and teaches patience, focus, and
+          resilience. Today, it is played worldwide both on physical boards and
+          online, uniting millions of players in a shared passion for strategy
+          and intellect. Whether you’re a beginner or a seasoned player, the
+          board is always ready for your next move.
         </p>
         <img src="./images/chess image 2.jpg" />
       </div>
     </section>
     <section id="lessons" class="section">
       <h2>Chess Lessons</h2>
-      <div id="cards"></div>
+      <div class="cards">
+        <a href="./lessons/caro.html" class="card">
+          <h3>Caro-Kann Defense</h3>
+          <p>Solid and defensive opening</p>
+        </a>
+        <a href="./lessons/kings.html" class="card">
+          <h3>King's Gambit</h3>
+          <p>Aggressive attacking opening</p>
+        </a>
+        <a href="./lessons/queens.html" class="card">
+          <h3>Queen's Gambit</h3>
+          <p>Classic positional play</p>
+        </a>
+        <a href="./lessons/sicilian.html" class="card">
+          <h3>Sicilian Defense</h3>
+          <p>Sharp and tactical</p>
+        </a>
+        <a href="./lessons/london.html" class="card">
+          <h3>London System</h3>
+          <p>Simple and reliable</p>
+        </a>
+        <a href="./lessons/english.html" class="card">
+          <h3>English Opening</h3>
+          <p>Flexible strategy</p>
+        </a>
+      </div>
     </section>
     <section id="players" class="section">
       <h2>Top Players</h2>
       <div class="players">
-        <div class="card">Magnus Carlsen</div>
-        <div class="card">Hikaru Nakamura</div>
-        <div class="card">Garry Kasparov</div>
+        <div class="card">
+          <h3>Magnus Carlsen</h3>
+          <p>Rating: 2840</p>
+        </div>
+        <div class="card">
+          <h3>Hikaru Nakamura</h3>
+          <p>Rating: 2780</p>
+        </div>
+        <div class="card">
+          <h3>Garry Kasparov</h3>
+          <p>Rating: 2812</p>
+        </div>
       </div>
     </section>
     <section id="join" class="section">
@@ -65,6 +110,5 @@
     <footer>
       <p>© 2026 ChessZone</p>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>

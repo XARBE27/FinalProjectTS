@@ -60,19 +60,43 @@ body {
   text-align: center;
 }
 
+.section h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 40px;
   margin-top: 20px;
+  align-items: center;
+}
+
+.about-grid p {
+  text-align: left;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #d6d6d6;
+  letter-spacing: 0.3px;
+
+  max-height: 360px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 12;
+  -webkit-box-orient: vertical;
 }
 
 .about-grid img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
+  object-fit: cover;
+  max-height: 360px;
 }
 
-#cards {
+#cards,
+.cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -83,6 +107,18 @@ body {
   background: #222;
   padding: 20px;
   border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #333;
+}
+
+.cards .card {
+  text-decoration: none;
+  color: white;
+  display: block;
 }
 
 .players {
