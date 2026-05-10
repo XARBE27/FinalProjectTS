@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
@@ -51,49 +51,82 @@ body {
 .hero-text {
   text-align: center;
   background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
 }
 
 .section {
-  padding: 60px 30px;
+  padding: 80px 30px;
   text-align: center;
 }
 
 .section h2 {
-  margin-bottom: 30px;
-  font-size: 28px;
+  margin-bottom: 40px;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
+
+/* ABOUT SECTION */
 
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-top: 20px;
+  gap: 50px;
+  margin-top: 30px;
   align-items: center;
 }
 
 .about-grid p {
   text-align: left;
-  font-size: 15.5px;
-  line-height: 1.6;
-  color: #d6d6d6;
-  letter-spacing: 0.3px;
+  font-size: 18px;
+  line-height: 1.9;
+  color: #d8d8d8;
+  letter-spacing: 0.4px;
 
-  max-height: 360px;
-  overflow: hidden;
+  background: #181818;
+  padding: 30px;
+  border-radius: 20px;
 
-  display: -webkit-box;
-  -webkit-line-clamp: 12;
-  -webkit-box-orient: vertical;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+
+  max-height: 420px;
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: orange #222;
+}
+
+.about-grid p::-webkit-scrollbar {
+  width: 8px;
+}
+
+.about-grid p::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 10px;
+}
+
+.about-grid p::-webkit-scrollbar-thumb {
+  background: orange;
+  border-radius: 10px;
 }
 
 .about-grid img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 20px;
   object-fit: cover;
-  max-height: 360px;
+  max-height: 420px;
+
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+  transition: 0.3s;
 }
+
+.about-grid img:hover {
+  transform: scale(1.02);
+}
+
+/* CARDS */
 
 #cards,
 .cards {
@@ -104,15 +137,16 @@ body {
 }
 
 .card {
-  background: #222;
-  padding: 20px;
-  border-radius: 10px;
+  background: #1d1d1d;
+  padding: 25px;
+  border-radius: 16px;
   transition: 0.3s;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
 .card:hover {
-  transform: scale(1.05);
-  background: #333;
+  transform: translateY(-5px);
+  background: #292929;
 }
 
 .cards .card {
@@ -127,24 +161,132 @@ body {
   gap: 20px;
 }
 
+/* JOIN SECTION */
+
+.join-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.join-form-box,
+.leaderboard {
+  background: #181818;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+}
+
+.join-form-box {
+  width: 450px;
+}
+
+.join-form-box h2,
+.leaderboard h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+/* FORM */
+
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: auto;
+  gap: 15px;
+  width: 100%;
 }
 
 .form input,
 .form textarea {
-  padding: 10px;
-  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
   border: none;
+  border-radius: 10px;
+  background: #f1f1f1;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 12px rgba(255, 166, 0, 0.35);
+}
+
+.form textarea {
+  resize: none;
+  height: 120px;
 }
 
 .form button {
-  padding: 10px;
-  background: orange;
+  padding: 15px;
   border: none;
+  border-radius: 10px;
+  background: orange;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background: rgb(255, 187, 61);
+  transform: translateY(-2px);
+}
+
+.leaderboard {
+  width: 360px;
+  background: #181818;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  max-height: 420px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: orange #222;
+}
+
+.leaderboard::-webkit-scrollbar {
+  width: 8px;
+}
+
+.leaderboard::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 10px;
+}
+
+.leaderboard::-webkit-scrollbar-thumb {
+  background: orange;
+  border-radius: 10px;
+}
+
+.leaderboard h2 {
+  margin-bottom: 25px;
+}
+
+.leader-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #252525;
+  padding: 16px 18px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  transition: 0.3s;
+}
+
+.leader-card:hover {
+  background: #303030;
+  transform: translateX(5px);
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #000;
+  margin-top: 40px;
 }
