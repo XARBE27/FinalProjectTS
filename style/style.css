@@ -18,17 +18,22 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+
+  padding: 20px;
   background: black;
+
+  position: relative;
 }
 
 .logo {
-  font-size: 22px;
+  font-size: 24px;
+  color: white;
 }
 
 .nav-links {
   display: flex;
   gap: 20px;
+
   list-style: none;
 }
 
@@ -37,10 +42,14 @@ body {
   text-decoration: none;
 }
 
-.menu-toggle {
+.menu {
   display: none;
-  font-size: 24px;
+  color: white;
+  font-size: 30px;
   cursor: pointer;
+  user-select: none;
+  margin-left: auto;
+  line-height: 1;
 }
 
 .hero {
